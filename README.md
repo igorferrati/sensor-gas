@@ -22,14 +22,14 @@ do ambiente, permitindo uma análise em tempo real das condições do ar.*
 
 ---
 
-### Arduino e MQ-135: Saúde e Bem Estar
+## Arduino e MQ-135: Saúde e Bem Estar
 
 Para realização de nosso projeto montaremos uma arquitetura onde
 teremos um sensor de gás e a partir da detecção feita pelo sensor, o
 microcontrolador que estiver ligado ao módulo será notificado e poderá tomar
 ações determinadas.
 
-### Arquitetura / Hardware
+## Arquitetura / Hardware
 
 * Placa Arduino UNO R3
 * Sensor gás MQ-135 
@@ -37,7 +37,7 @@ ações determinadas.
 * Sensores LED (verde e vermelho)
 * Três Resistor de 150Ω
 
-### Protocolo MQTT
+## Protocolo MQTT
 
 A placa Arduino UNO R3 não é provida de Wifi, porém utilizaremos a conexão via porta USB com script em python do qual abre um client para mqtt possibilitando enviar os dados coletados pelo arduino + sensor a qualquer broker escolhido. Neste exercício vamos utilzar 2 cenários:
 
@@ -50,10 +50,10 @@ Esquema:
 
 <img src="./imagens/MQTT.png" alt="ESQUEMA PROTOCOLO MQTT" width="400" height="250">
 
-### Dashboards
+## Dashboards
 
 Disponível em:
 Disponível em:
 
-<img src="./imagens/metrics.png" alt="Métricas" width="500" height="200">
-<img src="./imagens/nivel-gas.png" alt="Nível" width="250" height="200">
+<img src="./imagens/metrics.png" alt="Métricas" width="400" height="200">
+<img src="./imagens/nivel-gas.png" alt="Nível" width="200" height="180">
