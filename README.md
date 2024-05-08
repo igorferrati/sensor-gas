@@ -1,5 +1,4 @@
 ## Monitoramento e Qualidade do Ar
-### Arduino e MQ-135: Saúde e Bem Estar
 
 ***Abstract.** This article presents the conception of an IoT project focusing on
 SDG 3, which addresses health and well-being, with metrics aimed at
@@ -22,3 +21,39 @@ Arduino UNO, da qual controla e executa ações com base nos dados coletados
 do ambiente, permitindo uma análise em tempo real das condições do ar.*
 
 ---
+
+### Arduino e MQ-135: Saúde e Bem Estar
+
+Para realização de nosso projeto montaremos uma arquitetura onde
+teremos um sensor de gás e a partir da detecção feita pelo sensor, o
+microcontrolador que estiver ligado ao módulo será notificado e poderá tomar
+ações determinadas.
+
+### Arquitetura / Hardware
+
+* Placa Arduino UNO R3
+* Sensor gás MQ-135 
+* Protoboard
+* Sensores LED (verde e vermelho)
+* Três Resistor de 150Ω
+
+### Protocolo MQTT
+
+A placa Arduino UNO R3 não é provida de Wifi, porém utilizaremos a conexão via porta USB com script em python do qual abre um client para mqtt possibilitando enviar os dados coletados pelo arduino + sensor a qualquer broker escolhido. Neste exercício vamos utilzar 2 cenários:
+
+1 - Script para conexão com broker local Mosquitto
+
+2 - Script para conexão com broker fornecido pela Adafruit.IO e criação de dashboard com dados coletados.
+
+
+Esquema:
+
+<img src="./imagens/MQTT.png" alt="ESQUEMA PROTOCOLO MQTT" width="400" height="250">
+
+### Dashboards
+
+Disponível em:
+Disponível em:
+
+<img src="./imagens/metrics.png" alt="Métricas" width="700" height="350">
+<img src="./imagens/nivel-gas.png" alt="Nível" width="300" height="250">
