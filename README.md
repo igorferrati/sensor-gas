@@ -55,5 +55,5 @@ Esquema:
 Disponível em:
 Disponível em:
 
-<img src="./imagens/metrics.png" alt="Métricas" width="700" height="350">
-<img src="./imagens/nivel-gas.png" alt="Nível" width="300" height="250">
+<img src="./imagens/metrics.png" alt="Métricas" width="500" height="200">
+<img src="./imagens/nivel-gas.png" alt="Nível" width="250" height="200">
