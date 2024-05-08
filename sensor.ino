@@ -1,5 +1,4 @@
-#define sensorDigital 9
-#define sebsirAnalogico A0
+#define sensorAnalogico A0
 #define ledverde 4
 #define ledvermelho 3
 
@@ -13,26 +12,29 @@ void setup() {
 }
 
 void loop() {
-  int ValorD = digitalRead(sensorDigital);
-  int ValorA = analogRead(sebsirAnalogico);
+  int ValorA = analogRead(sensorAnalogico);
 
   if (ValorA <= 40) {
     Serial.print("Sensor Analogico: ");
     Serial.println(ValorA);
-    //Serial.print("Sensor Digital: ");
-    //Serial.println(ValorD);
-    Serial.println("Ar sem presenca de gases toxicos");
+    Serial.println("Qualidade do ar normal");
     digitalWrite(ledverde, HIGH);
     digitalWrite(ledvermelho, LOW);
-  } else {
+  } 
+  else if (ValorA > 40 && ValorA <= 75) {
     Serial.print("Sensor Analogico: ");
     Serial.println(ValorA);
-    //Serial.print("Sensor Digital: ");
-    //Serial.println(ValorD);
-    Serial.println("[ATENÇÃO] Qualidade do ar comprometida");
+    Serial.println("ATENCAO: Presença de gases nocivos no ar");
+    digitalWrite(ledverde, LOW);
+    digitalWrite(ledvermelho, LOW);
+  } 
+  else {
+    Serial.print("Sensor Analogico: ");
+    Serial.println(ValorA);
+    Serial.println("CUIDADO: Qualidade do ar comprometida");
     digitalWrite(ledvermelho, HIGH);
     digitalWrite(ledverde, LOW);
   }
 
-  delay(10000);
+  delay(2000);
 }
